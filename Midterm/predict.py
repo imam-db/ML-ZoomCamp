@@ -2,10 +2,12 @@ import pandas as pd
 import pickle
 from flask import Flask, render_template, request
 from waitress import serve
+import os
 
 app = Flask(__name__)
 filename = 'titanic_model.pkl'
 model = pickle.load(open(filename, 'rb'))
+port = int(os.environ.get("PORT", 5000))
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -21,5 +23,5 @@ def index():
         return X_test.to_html()
 
 if __name__ == "__main__":
-    #app.run(host='0.0.0.0', port=6969)
-    serve(app, host='0.0.0.0', port=6969)
+    app.run(debug=True, host='0.0.0.0', port=port)
+    #serve(app, host='0.0.0.0', port=port)
