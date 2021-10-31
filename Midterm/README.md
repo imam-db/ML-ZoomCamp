@@ -27,8 +27,18 @@ Model is deployed with Flask.
 
 ### **Dependency and environment management**
 
-For environment management, I use the feature from anaconda, namely conda environment. To use it is quite easy, from the anaconda prompt type the command "conda create --name name_of_environment python=3.8" , which means we will create a new environment with the name "name_of_environment", (we can replace it with another name) and at the same time will install python version 3.8 After that, we have to activate it to use it by typing the command "conda activate name_of_environment"
-For the dependency library that we use, it can be put into a single file with the name "requirements.txt", which we will use to install in docker. To retrieve all installed libraries can use the command "pip freeze > requirements.txt".
+For environment management, I use the feature from anaconda, namely conda environment. To use it is quite easy, from the anaconda prompt type the command 
+```
+conda create --name name_of_environment python=3.8
+```
+which means we will create a new environment with the name "name_of_environment", (we can replace it with another name) and at the same time will install python version 3.8 After that, we have to activate it to use it by typing the command 
+```
+conda activate name_of_environment
+```
+For the dependency library that we use, it can be put into a single file with the name "requirements.txt", which we will use to install in docker. To retrieve all installed libraries can use the command 
+```
+pip freeze > requirements.txt
+```
 
 
 ### **Containerization**
