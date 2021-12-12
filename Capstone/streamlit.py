@@ -4,7 +4,12 @@ import pandas as pd
 import pickle
 
 
-model_file = pickle.load(open('mushroom_model.pkl','rb'))
+#model_file = pickle.load(open('mushroom_model.pkl','rb'))
+
+with open('mushroom_model.pkl', 'rb') as handle: 
+    data = handle.read() 
+  # reconstructing the data as dictionary 
+    model_file = pickle.loads(data) 
 
 cap_shape_dict = {"b":0,"c":1,"f":2,"k":3,"s":4,"x":5}
 cap_surface_dict = {"f":0,"g":1,"s":2,"y":3}
