@@ -123,7 +123,8 @@ After the app container build, release it using :
 ```
 heroku container:release web –-app name_of_app
 ```
-Which will produce following **Releasing image web to name_of_app… done**. Once is releease we can check the result on the web by typing **name_of_app.herokuapp.com**. In this task, you can check my app in link [capstone-mushroom.herokuapp.com](http://capstone-mushroom.herokuapp.com/). It is simple app, contain link to download testing data in csv file and can be uploaded to check the result of probability the passenger is survived or not. 
+Which will produce following **Releasing image web to name_of_app… done**. Once is releease we can check the result on the web by typing **name_of_app.herokuapp.com**. In this task, you can check my app in link [capstone-mushroom.herokuapp.com](http://capstone-mushroom.herokuapp.com/). It is simple app, contain link to download testing data in csv file and can be uploaded to check the result whether mushroom is edible or poisonous.
+You can also check via [streamlit](https://share.streamlit.io/imam-db/ml-zoomcamp/Capstone/streamlit.py) 
 
 
 
