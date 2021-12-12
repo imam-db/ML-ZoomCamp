@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 
 
-model_file = 'mushroom_model.pkl'
+model_file = pickle.load(open('mushroom_model.pkl','rb'))
 
 cap_shape_dict = {"b":0,"c":1,"f":2,"k":3,"s":4,"x":5}
 cap_surface_dict = {"f":0,"g":1,"s":2,"y":3}
@@ -36,8 +36,8 @@ columns_X = ['cap-shape', 'cap-surface', 'cap-color', 'bruises', 'odor',
        'stalk-color-below-ring', 'veil-type', 'veil-color', 'ring-number',
        'ring-type', 'spore-print-color', 'population', 'habitat']
 
-with open(model_file, 'rb') as f_in:
-    model = pickle.load(f_in)
+# with open(model_file, 'rb') as f_in:
+#     model = pickle.load(f_in)
 
 
 def predict(answers_dict):
