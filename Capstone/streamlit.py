@@ -1,10 +1,13 @@
 import streamlit as st
 import pandas as pd
-
 import pickle
+from pathlib import Path
 
 
-model_file = pickle.load(open(st.secrets["file_pkl"],'rb'))
+pkl_path = Path(__file__).parents[1] / 'Capstone/mushroom_model.pkl'
+
+#model_file = pickle.load(open(st.secrets["file_pkl"],'rb'))
+model = pickle.load(open(pkl_path,'rb'))
 
 
 cap_shape_dict = {"b":0,"c":1,"f":2,"k":3,"s":4,"x":5}
