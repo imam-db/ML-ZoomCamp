@@ -93,7 +93,7 @@ After preparing its Dockerfile. the next step is to build it, simply by typing t
 ```
 docker build -t mushroom-flask .
 ```
-which "titanic-flask" will be the docker image for our application. 
+which "mushroom-flask" will be the docker image for our application. 
 After successfully built, it can be continued to running by typing 
 ```
 docker run -p 5000:5000 mushroom-flask
